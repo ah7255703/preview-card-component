@@ -21,7 +21,7 @@ $color-transition: color 0.3s ease;
 
 main {
   background: $very-dark-blue;
-  height: 95vh;
+  min-height: 95vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ main {
 }
 article {
   width: 250px;
-  height: 400px;
+  min-height: 390px;
   background: $dark-blue;
   border-radius: 15px;
   display: flex;
@@ -71,7 +71,8 @@ article {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
+
   h1 {
     font-size: 0.9rem;
     color: $white;
@@ -117,6 +118,9 @@ article {
   align-items: center;
   gap: 10px;
   width: 100%;
+  border-top: 1px solid $softblue;
+  padding-top: 10px;
+  margin-top: 10px;
   justify-content: flex-start;
   img {
     width: 25px;

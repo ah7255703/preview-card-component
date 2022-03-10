@@ -15,7 +15,7 @@ body {
 
 main {
   background: #0d192b;
-  height: 95vh;
+  min-height: 95vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@ main {
 
 article {
   width: 250px;
-  height: 400px;
+  min-height: 390px;
   background: #14253d;
   border-radius: 15px;
   display: flex;
@@ -64,7 +64,7 @@ article .equilibrum-img:hover::after {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .description h1 {
   font-size: 0.9rem;
@@ -108,6 +108,9 @@ article .equilibrum-img:hover::after {
   align-items: center;
   gap: 10px;
   width: 100%;
+  border-top: 1px solid #8bacda;
+  padding-top: 10px;
+  margin-top: 10px;
   justify-content: flex-start;
 }
 .user img {
