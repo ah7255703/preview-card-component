@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 18px;
+}
+body {
+  font-family: "Outfit";
+}
+
+$softblue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$very-dark-blue: hsl(217, 54%, 11%);
+$dark-blue: hsl(216, 50%, 16%);
+$light-dark-blue: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+$color-transition: color 0.3s ease;
+
+main {
+  background: $very-dark-blue;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article {
+  width: 250px;
+  height: 400px;
+  background: $dark-blue;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 12px;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3);
+  .equilibrum-img {
+    border-radius: 15px;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      background: $cyan url("../images/icon-view.svg") no-repeat center;
+      height: 100%;
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
+  h1 {
+    font-size: 0.9rem;
+    color: $white;
+    transition: $color-transition;
+  }
+  h1:hover {
+    color: $cyan;
+    cursor: pointer;
+  }
+  p {
+    font-size: 0.6rem;
+    color: $softblue;
+  }
+}
+
+.extra-desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  span {
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    img {
+      width: 0.5rem;
+    }
+  }
+
+  & :first-child {
+    color: $cyan;
+  }
+
+  & :nth-child(2) {
+    color: $softblue;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-start;
+  img {
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  small {
+    color: $softblue;
+    font-size: 0.6rem;
+    span {
+      color: $white;
+      transition: $color-transition;
+      &:hover {
+        color: $cyan;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.attribution {
+  background: $very-dark-blue;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.5rem;
+  a {
+    margin: 0 5px;
+    color: inherit;
+    text-decoration-style: wavy;
+    text-decoration-color: $cyan;
+  }
+}
